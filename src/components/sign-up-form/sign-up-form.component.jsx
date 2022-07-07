@@ -2,6 +2,7 @@ import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "
 import { useState } from "react";
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
+import "./sign-up-form.styles.scss";
 
 const defaultFormFields = {
   displayName: "",
@@ -39,8 +40,9 @@ const SignUpForm = () => {
   };
 
   return (
-    <div>
-      <h1>Sign up with your email and password</h1>
+    <div className="sign-up-container">
+      <h2>I do not have an account</h2>
+      <span>Sign up with your email and password</span>
       <form onSubmit={handleSubmit}>
         <FormInput label="Display Name" type="text" name="displayName" onChange={changeHandler} value={displayName} required />
         <FormInput label="Email" type="email" name="email" onChange={changeHandler} value={email} required />
